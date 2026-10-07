@@ -1,0 +1,52 @@
+# Copy this to profile.yaml and fill it in:   cp example-profile.yaml profile.yaml
+# profile.yaml is gitignored, so your details never end up on GitHub.
+# huntlot re-reads it on every run.
+
+name: Your Name
+email: you@example.com
+phone: "+91-0000000000"
+country: India            # where you live; remote jobs are checked against this
+links:
+  linkedin: https://linkedin.com/in/your-handle
+  github: https://github.com/your-handle
+resume_pdf: ~/path/to/resume.pdf
+
+# A few lines about your experience, used when the AI judges fit.
+about: >
+  Early-career backend developer. What you've built, with which stack, and anything
+  that shows real-world work (open source, freelance, research). Be factual.
+
+education:
+  - { degree: BCA, school: Your University, years: 2022-2025 }
+
+targets:
+  # Ranking: remote (open to your country) first, then preferred cities, then ok cities.
+  remote: true
+  locations:
+    preferred: [bangalore, bengaluru]
+    ok: [pune, hyderabad]
+  employment_types: [full-time, intern, contract, part-time]
+  # Titles with these words rank higher. Any engineer/developer role is kept.
+  roles: [backend, node.js, api, platform, full stack, software engineer, developer]
+  # Titles containing these are dropped
+  exclude_titles: [senior, sr., staff, principal, lead, manager, director, head, architect, "ii", "iii", "iv", vp, sales, marketing, recruiter, designer]
+  # Companies to never show
+  exclude_companies: []
+  min_salary_monthly_inr: 20000   # postings with no salary listed are kept
+  # true = drop postings that require you to be currently enrolled
+  exclude_student_only: true
+
+# Skills, strongest first. Used to score how well a job fits.
+skills:
+  core: [typescript, javascript, node.js, postgresql]
+  familiar: [docker, react, redis]
+  exposure: [kubernetes]
+
+# Standard answers for application forms.
+answers:
+  work_authorization_india: "Yes"
+  needs_sponsorship: "No"
+  notice_period: "Immediate"
+  expected_stipend_monthly_inr: ""
+  expected_ctc_lpa: ""
+  willing_to_relocate: "Yes"

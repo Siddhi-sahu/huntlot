@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres:17
+    container_name: huntlot-db
+    environment:
+      POSTGRES_USER: huntlot
+      POSTGRES_PASSWORD: huntlot
+      POSTGRES_DB: huntlot
+    ports:
+      - "5433:5432" # 5433 on your Mac, so it never clashes with a Homebrew Postgres on 5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U huntlot"]
+      interval: 2s
+      retries: 15
+
+volumes:
+  pgdata:

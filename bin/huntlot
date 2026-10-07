@@ -1,0 +1,4 @@
+#!/bin/sh
+# Lets you run `huntlot ...` from anywhere once this folder's bin/ is on PATH (or symlinked).
+dir="$(cd "$(dirname "$(realpath "$0")")/.." && pwd)"
+exec "$dir/node_modules/.bin/tsx" "$dir/src/cli.ts" "$@"

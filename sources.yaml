@@ -1,0 +1,55 @@
+# Where huntlot looks for jobs.
+
+# Company job boards. Find a company's careers page; if its links go to
+#   boards.greenhouse.io/<slug>, jobs.lever.co/<slug> or jobs.ashbyhq.com/<slug>
+# add it here.
+boards:
+  # Remote-first / hire worldwide
+  - { name: GitLab,        source: greenhouse, slug: gitlab }
+  - { name: Vercel,        source: greenhouse, slug: vercel }
+  - { name: Grafana Labs,  source: greenhouse, slug: grafanalabs }
+  - { name: Cloudflare,    source: greenhouse, slug: cloudflare }
+  - { name: Elastic,       source: greenhouse, slug: elastic }
+  - { name: Mattermost,    source: greenhouse, slug: mattermost }
+  - { name: Cockroach Labs, source: greenhouse, slug: cockroachlabs }
+  - { name: Netlify,       source: greenhouse, slug: netlify }
+  - { name: Twilio,        source: greenhouse, slug: twilio }
+  - { name: Fivetran,      source: greenhouse, slug: fivetran }
+  - { name: Supabase,      source: ashby,      slug: supabase }
+  - { name: PostHog,       source: ashby,      slug: posthog }
+  - { name: Linear,        source: ashby,      slug: linear }
+  - { name: Railway,       source: ashby,      slug: railway }
+  - { name: Render,        source: ashby,      slug: render }
+  - { name: n8n,           source: ashby,      slug: n8n }
+  - { name: Resend,        source: ashby,      slug: resend }
+  - { name: Neon,          source: ashby,      slug: neon }
+  - { name: Replit,        source: ashby,      slug: replit }
+  - { name: LangChain,     source: ashby,      slug: langchain }
+  - { name: Trigger.dev,   source: ashby,      slug: triggerdev }
+  - { name: Infisical,     source: ashby,      slug: infisical }
+  - { name: Plane,         source: ashby,      slug: plane }
+  - { name: Composio,      source: ashby,      slug: composio }
+  - { name: Toptal,        source: lever,      slug: toptal }
+  # India
+  - { name: Paytm,         source: lever,      slug: paytm }
+  - { name: Meesho,        source: lever,      slug: meesho }
+  - { name: Zeta,          source: lever,      slug: zeta }
+  - { name: CRED,          source: lever,      slug: cred }
+  - { name: Mindtickle,    source: lever,      slug: mindtickle }
+  - { name: Groww,         source: greenhouse, slug: groww }
+  - { name: Slice,         source: greenhouse, slug: slice }
+  - { name: InMobi,        source: greenhouse, slug: inmobi }
+  - { name: Rubrik,        source: greenhouse, slug: rubrik }
+  - { name: Databricks,    source: greenhouse, slug: databricks }
+  - { name: Stripe,        source: greenhouse, slug: stripe }
+  - { name: Sarvam,        source: ashby,      slug: sarvam }
+  - { name: Atlan,         source: ashby,      slug: atlan }
+
+# Remote job sites (many companies at once)
+feeds:
+  himalayas:
+    queries: [backend, node.js, typescript, full stack, software engineer, junior developer, intern]
+    pages: 2          # 20 jobs a page, per query, for "worldwide" and for "India"
+  remotive:
+    categories: [software-dev]
+  remoteok: {}
